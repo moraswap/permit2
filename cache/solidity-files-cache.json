@@ -1,0 +1,656 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/AllowanceTransfer.sol": {
+      "lastModificationDate": 1687147960694,
+      "contentHash": "de30e7b3c7afc84bb72695044020c1a7",
+      "sourceName": "contracts/AllowanceTransfer.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "solmate/src/tokens/ERC20.sol",
+        "solmate/src/utils/SafeTransferLib.sol",
+        "./libraries/PermitHash.sol",
+        "./libraries/SignatureVerification.sol",
+        "./EIP712.sol",
+        "./interfaces/IAllowanceTransfer.sol",
+        "./PermitErrors.sol",
+        "./libraries/Allowance.sol"
+      ],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "AllowanceTransfer"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/libraries/SignatureVerification.sol": {
+      "lastModificationDate": 1687147960687,
+      "contentHash": "2f12d6294418a22175e58b5cf6dd732f",
+      "sourceName": "contracts/libraries/SignatureVerification.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IERC1271.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "SignatureVerification"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/EIP712.sol": {
+      "lastModificationDate": 1687147960694,
+      "contentHash": "94e1f4ff3ed92cc01498956b9850ffd3",
+      "sourceName": "contracts/EIP712.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "EIP712"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/interfaces/IAllowanceTransfer.sol": {
+      "lastModificationDate": 1687147960701,
+      "contentHash": "e05b52f8b7fff6859e1898615df4eea4",
+      "sourceName": "contracts/interfaces/IAllowanceTransfer.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "IAllowanceTransfer"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/PermitErrors.sol": {
+      "lastModificationDate": 1687147960696,
+      "contentHash": "5c0c380ef81916d01a551332c234de60",
+      "sourceName": "contracts/PermitErrors.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": []
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/libraries/Allowance.sol": {
+      "lastModificationDate": 1687147960677,
+      "contentHash": "61b3064d19425b3b76d395bb0904aaeb",
+      "sourceName": "contracts/libraries/Allowance.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IAllowanceTransfer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "Allowance"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/libraries/PermitHash.sol": {
+      "lastModificationDate": 1687147960683,
+      "contentHash": "d7a21610ed56577d34987a1e0c817b97",
+      "sourceName": "contracts/libraries/PermitHash.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IAllowanceTransfer.sol",
+        "../interfaces/ISignatureTransfer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "PermitHash"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/node_modules/solmate/src/utils/SafeTransferLib.sol": {
+      "lastModificationDate": 1687148581273,
+      "contentHash": "0563dad64d8104a8995928b43d405f88",
+      "sourceName": "solmate/src/utils/SafeTransferLib.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../tokens/ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "SafeTransferLib"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/node_modules/solmate/src/tokens/ERC20.sol": {
+      "lastModificationDate": 1687148581266,
+      "contentHash": "0c7c7ada139062536af09d69d96d395c",
+      "sourceName": "solmate/src/tokens/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/interfaces/IERC1271.sol": {
+      "lastModificationDate": 1687147960709,
+      "contentHash": "836b8371a3076d82925634d9c8f445a2",
+      "sourceName": "contracts/interfaces/IERC1271.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "IERC1271"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/interfaces/ISignatureTransfer.sol": {
+      "lastModificationDate": 1687147960703,
+      "contentHash": "c1d9190326493d0beaf5c05d0f76016d",
+      "sourceName": "contracts/interfaces/ISignatureTransfer.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "ISignatureTransfer"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/Permit2.sol": {
+      "lastModificationDate": 1687147960696,
+      "contentHash": "565591de7947108f9dd6f4806489c80f",
+      "sourceName": "contracts/Permit2.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SignatureTransfer.sol",
+        "./AllowanceTransfer.sol"
+      ],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "Permit2"
+      ]
+    },
+    "/Users/phunh.2510/Documents/digital-maxtech/neon_moraswap/permit2/contracts/SignatureTransfer.sol": {
+      "lastModificationDate": 1687147960694,
+      "contentHash": "ba7d23cfeb8ce62b852718b25e8f2ca1",
+      "sourceName": "contracts/SignatureTransfer.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x00000000d41867734bbee4c6863d9255b2b06ac1"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/ISignatureTransfer.sol",
+        "./PermitErrors.sol",
+        "solmate/src/tokens/ERC20.sol",
+        "solmate/src/utils/SafeTransferLib.sol",
+        "./libraries/SignatureVerification.sol",
+        "./libraries/PermitHash.sol",
+        "./EIP712.sol"
+      ],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "SignatureTransfer"
+      ]
+    }
+  }
+}
